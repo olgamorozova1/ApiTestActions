@@ -1,7 +1,5 @@
 name: Run tests
-
 on: [push]
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,3 +14,12 @@ jobs:
           cache: maven
       - name: Run tests
         run: mvn test
+      - name: Upload output file
+        uses: actions/upload-artifact@v3
+          with:
+            name: output-log-file
+            path: output.log
+      - name: Download a single artifact
+          uses: actions/download-artifact@v3
+          with:
+            name: output-log-file
