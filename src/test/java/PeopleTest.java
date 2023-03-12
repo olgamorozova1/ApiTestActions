@@ -11,6 +11,7 @@ public class PeopleTest {
     PeopleClient peopleClient = new PeopleClient();
     private Map<Integer, String> responseCodeAndBody = new HashMap<>();
 
+    @DisplayName("Get person test")
     @Test
     public void getInfo () {
         responseCodeAndBody.putAll(peopleClient.getPeople());
