@@ -1,5 +1,5 @@
 name: Print PR context
-on: workflow_dispatch
+on: push
 jobs:
   print:
     runs-on: ubuntu-latest
