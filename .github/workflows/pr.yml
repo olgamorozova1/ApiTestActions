@@ -2,7 +2,7 @@ name: Print PR context
 on: [workflow_dispatch]
 jobs:
   print:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print action
-        run: echo "${{ github }}"
+      runs-on: ubuntu-latest
+      steps:
+        - name: Print context
+          run: echo "${{ github }}"
