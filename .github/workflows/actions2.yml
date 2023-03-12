@@ -1,7 +1,7 @@
 name: Print PR context
 on:
   push:
-  workflow-dispatch:
+  workflow_dispatch:
   pull_request:
     types: [opened, edited, reopened]
 jobs:
