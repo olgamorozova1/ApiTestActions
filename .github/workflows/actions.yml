@@ -1,4 +1,4 @@
-name: Java CI
+name: Run tests
 
 on: [push]
 
@@ -13,5 +13,5 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Build with Maven
+      - name: Run tests
         run: mvn test

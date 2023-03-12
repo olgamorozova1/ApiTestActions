@@ -1,11 +1,12 @@
 import clients.PeopleClient;
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class PeopleTests {
+public class PeopleTest {
     PeopleClient peopleClient = new PeopleClient();
     private Map<Integer, String> responseCodeAndBody = new HashMap<>();
 
@@ -26,6 +27,7 @@ public class PeopleTests {
 
     @Test
     public void validateIncorrectPersonId() {
+        System.out.println("Test 3");
         int actualStatusCode = peopleClient.getPeopleByIndex(32745689);
         Assert.assertEquals(actualStatusCode, 404);
     }
