@@ -1,5 +1,6 @@
 import clients.PeopleClient;
 import org.junit.Assert;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 
@@ -10,6 +11,7 @@ public class PeopleTest {
     PeopleClient peopleClient = new PeopleClient();
     private Map<Integer, String> responseCodeAndBody = new HashMap<>();
 
+    @DisplayName("Get person info")
     @Test
     public void getInfo () {
         responseCodeAndBody.putAll(peopleClient.getPeople());
