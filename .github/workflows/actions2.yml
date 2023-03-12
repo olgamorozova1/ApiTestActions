@@ -1,8 +1,12 @@
 name: Print PR context
-on: push
+on:
+  push:
+  workflow-dispatch:
+  pull_request:
+    types: [opened, edited, reopened]
 jobs:
   print:
     runs-on: ubuntu-latest
     steps:
       - name: Print context
-        run: echo "${{ toJSON(github) }}"
+        run: echo "${{ toJSON(github.event) }}"
