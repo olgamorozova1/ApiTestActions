@@ -27,16 +27,16 @@ jobs:
           java-version: 17
           distribution: 'temurin'
       - name: Run Test
-          if: always()
-          run: mvn test
-          continue-on-error: true
+        if: always()
+        run: mvn test
+        continue-on-error: true
       - name: Get Allure history
         uses: actions/checkout@v2
-          if: always()
-          continue-on-error: true
-          with:
-            ref: gh-pages
-            path: gh-pages
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
       - name: Allure Report action from marketplace
         uses: simple-elf/allure-report-action@master
           if: always()
