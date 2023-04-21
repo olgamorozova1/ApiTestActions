@@ -1,0 +1,13 @@
+name: DEMO 1
+on: [push, workflow_dispatch]
+env:
+  ENV: qa
+  SECRET: 11
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: |
+          echo "${{ env.ENV }}"
+          echo "${{ env.SECRET }}"
