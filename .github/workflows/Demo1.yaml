@@ -1,4 +1,4 @@
-name: DEMO 1 workflow
+name: DEMO 1
 on: [push, workflow_dispatch]
 jobs:
   print:
