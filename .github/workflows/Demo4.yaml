@@ -1,13 +1,13 @@
-name: DEMO 1
+name: DEMO 4
 on: [push, workflow_dispatch]
 env:
   ENV: qa
-  SECRET: 11
+  SECRET: ${{ secrets.GH_SECRET }}
 jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello World
+      - name: Print env vars
         run: |
           echo "${{ env.ENV }}"
           echo "${{ env.SECRET }}"
