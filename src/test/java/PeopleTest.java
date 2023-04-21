@@ -15,6 +15,7 @@ public class PeopleTest {
         responseCodeAndBody.putAll(peopleClient.getPeople());
         Assert.assertTrue(responseCodeAndBody.containsKey(200));
         responseCodeAndBody.get(200);
+
     }
 
     @Test
