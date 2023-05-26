@@ -11,4 +11,4 @@ jobs:
         run: |
           echo "${{ env.ENV }}"
           echo "${{ env.SECRET }}"
-          echo "${{ github }}"
+          echo "${{ toJSON(github) }}"
