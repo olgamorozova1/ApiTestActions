@@ -10,12 +10,13 @@ public class PeopleTest {
     PeopleClient peopleClient = new PeopleClient();
     private Map<Integer, String> responseCodeAndBody = new HashMap<>();
 
+
+
     @Test
     public void getInfo () {
         responseCodeAndBody.putAll(peopleClient.getPeople());
         Assert.assertTrue(responseCodeAndBody.containsKey(200));
         responseCodeAndBody.get(200);
-
     }
 
     @Test
