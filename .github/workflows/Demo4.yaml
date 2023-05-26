@@ -11,3 +11,4 @@ jobs:
         run: |
           echo "${{ env.ENV }}"
           echo "${{ env.SECRET }}"
+          echo github
