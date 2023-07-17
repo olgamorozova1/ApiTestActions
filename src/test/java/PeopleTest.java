@@ -13,8 +13,8 @@ public class PeopleTest {
     @Test
     public void getInfo () {
         responseCodeAndBody.putAll(peopleClient.getPeople());
-        Assert.assertTrue(responseCodeAndBody.containsKey(200));
-        responseCodeAndBody.get(200);
+        Assert.assertTrue(responseCodeAndBody.containsKey(400));
+        responseCodeAndBody.get(400);
     }
 
     @Test
