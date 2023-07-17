@@ -27,7 +27,7 @@ public class PeopleTest {
 
     @Test
     public void validateIncorrectPersonId() {
-        System.out.println("Test 3");
+        System.out.println("Test 4");
         int actualStatusCode = peopleClient.getPeopleByIndex(32745689);
         Assert.assertEquals(actualStatusCode, 404);
     }
